@@ -15,12 +15,15 @@ je développe mes compétences à travers des
 - Cisco – Introduction à la Cybersécurité (Attestation). Autoformation continue sur TryhackMe, BlackTheBox et veille technologique
 
 
-<p><b> - Certifications: </b></p>
+<br>
+
+
+<p><b>🔴3 - Certifications: </b></p>
 
 
  
 </p>
-<p><b>🛡️ 3 Compétences techniques </b></p>
+<p><b>🔴 4 Compétences techniques </b></p>
 
 - Systèmes : Linux (Kali, Ubuntu), Windows
 - Réseaux : TCP/IP, DNS, DHCP, VPN, analyse de trafic
@@ -247,7 +250,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 
 
-<p><b>👨‍💻 6. Projets Cybersécurité </b></p>
+<p><b>👨‍💻 5. Projets Cybersécurité </b></p>
 
 
 
@@ -317,7 +320,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 <br>
 
-<p><b>🌐 7. Me contacter</b></p>
+<p><b>🌐 6. Me contacter</b></p>
 
 <p>
   <a href="mailto:oguensahl@gmail.com">
