@@ -20,6 +20,8 @@ je développe mes compétences à travers des
 
 <p><b>🔴3 - Certifications: </b></p>
 
+- Aucune
+
 <br>
  
 </p>
