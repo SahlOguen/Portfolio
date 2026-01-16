@@ -54,6 +54,8 @@ L’objectif est de comprendre le mécanisme de chiffrement et l’impact d’un
 
 - Mise en place de l’environnement de laboratoire
 
+- Reussite sur la récuperation du mot de passe et de l'authentification du hacker sur le serveur cible 
+
 - Chiffrement des fichiers et vue du contenu chiffré avec la commande “cat” sur la machine de l'attaquant
 
 - Observation du comportement du système pendant l’attaque
@@ -68,8 +70,8 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 <p><b>📸 Captures D'écran</b></p>
 
-![Fichiers chiffrés](images/fichiers_chiffres.png)
-![Message de chiffrement](images/message_ransomware.png)
+[Mise en place de l’environnement de laboratoire](01 CAP.png)
+[récuperation du mot de passe et de l'authentification](02 CAP.png)
 
 
 <p><b>🔴 6. Analyse & Défense </b></p>
