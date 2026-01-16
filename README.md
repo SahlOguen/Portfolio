@@ -1,4 +1,4 @@
-<h1>👋 Salut, je suis Herminio Romeu <br/><a href="https://github.com/joshmadakor1">Analyete </a><a href="https://www.linkedin.com/in/joshmadakor/">et Pentester</a> <a href="https://www.youtube.com/c/joshmadakor"></a></h1>
+<h1>👋 Salut, je suis Herminio Romeu <br/><a href="https://">Analyste </a><a href="">et Pentester en Cybersécurité</a> <a href="https://"></a></h1>
 
 Autodidacte passionné par la cybersécurité depuis 2021, orienté analyse SOC junior et Pentester. Développement des compétences via des laboratoires personnels, des simulations d’attaques réelles dans un cadre légal et la vulgarisation de la cybersécurité.
 
