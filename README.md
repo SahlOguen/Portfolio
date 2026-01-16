@@ -58,9 +58,9 @@ L’objectif est de comprendre le mécanisme de chiffrement et l’impact d’un
 
 - Chiffrement des fichiers et vue du contenu chiffré avec la commande “cat” sur la machine de l'attaquant
 
-- Observation du comportement du système pendant l’attaque
+- Note de rançon pour la victime
 
-- Analyse des fichiers affectés
+- Contre-mésures et configuration du fichier sshd_config pour bloquer les permissions ssh
 
 
 <p><b>🔴 5. Résultats observés </b></p>
@@ -70,8 +70,19 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 <p><b>📸 Captures D'écran</b></p>
 
-[Mise en place de l’environnement de laboratoire](01 CAP.png)
-[récuperation du mot de passe et de l'authentification](02 CAP.png)
+[Image: Mise en place de l’environnement de laboratoire](01_CAP.png)
+
+[Image: Récuperation du mot de passe et de l'authentification par l'attaquant](02_CAP.png)
+
+[Image: Chiffrement des fichiers](03_CAP.png)
+
+[Image: Note de rançon](04_CAP.png)
+
+[Image: Configuration du fichier sshd_config](05_CAP.png)
+
+
+
+
 
 
 <p><b>🔴 6. Analyse & Défense </b></p>
