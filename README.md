@@ -7,21 +7,20 @@ je développe mes compétences à travers des
 <strong>labs pratiques</strong>, des <strong>preuves de concept</strong> et des 
 <strong>démonstrations techniques</strong> documentées.
 
-<p><b>Vulgarisation & Sensibilisation </b></p>
+
+<p>
+<p><b>🔴 2 Formation & Apprentissage Continu </b></p>
+
+- Cisco – Introduction à la Cybersécurité (Attestation). Autoformation continue sur TryhackMe, BlackTheBox et veille technologique
+
+
+<p><b> - Vulgarisation & Sensibilisation </b></p>
 
 - Création de contenus pédagogiques sur la cybersécurité via YouTube et TikTok.
 
-
-
-
-<p>
-<p><b>Formation & Apprentissage Continu </b></p>
-
-- Cisco – Introduction à la Cybersécurité (Attestation). Autoformation continue sur TryhackMe, BlackTheBox et veille technologique 
-
  
 </p>
-<p><b>🛡️ 1 Compétences techniques </b></p>
+<p><b>🛡️ 3 Compétences techniques </b></p>
 
 - Systèmes : Linux (Kali, Ubuntu), Windows
 - Réseaux : TCP/IP, DNS, DHCP, VPN, analyse de trafic
@@ -30,7 +29,7 @@ je développe mes compétences à travers des
 - Virtualisation : VMware, VirtualBox, Docker
 
 
-<p><b>🔴  2 Projets Pratiques Sélectionnés </b></p>
+<p><b>🔴  4 Projets Pratiques Sélectionnés </b></p>
 
 <p><b>PROJET 1 — Attaque par Ransomware (LAB éducatif)</b></p>
 
@@ -40,7 +39,7 @@ je développe mes compétences à travers des
 L’objectif est de comprendre le mécanisme de chiffrement et l’impact d’une telle attaque sur un système.
 
 
-<p><b>💡 3. Environnement technique </b></p>
+<p><b>💡 2. Environnement technique </b></p>
  
 - Attaquant : Kali Linux
 
@@ -50,7 +49,7 @@ L’objectif est de comprendre le mécanisme de chiffrement et l’impact d’un
 
 - Outils : Terminal Linux, commandes système
 
-<p><b>🔴 4. Actions réalisées </b></p>
+<p><b>🔴 3. Actions réalisées </b></p>
 
 - Mise en place de l’environnement de laboratoire
 
@@ -63,7 +62,7 @@ L’objectif est de comprendre le mécanisme de chiffrement et l’impact d’un
 - Contre-mésures et configuration du fichier sshd_config pour bloquer les permissions ssh
 
 
-<p><b>🔴 5. Résultats observés </b></p>
+<p><b>🔴 4. Résultats observés </b></p>
 
 Les fichiers de la machine cible ont été chiffrés et rendus inaccessibles.
 Cette situation démontre l’impact critique d’un ransomware sur la disponibilité des données.
@@ -86,13 +85,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 👉 [Suivre la vidéo ici](https://youtu.be/hoLiapFHhdM?si=mGYM2-irQt6Vebjv)
 
 
-
-
-
-
-
-
-<p><b>🔴 6. Analyse & Défense </b></p>
+<p><b>🔴 5. Analyse & Défense </b></p>
 
 - Surveillance des comportements anormaux
 
@@ -101,11 +94,12 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 - Limitation des privilèges utilisateurs
 
 - Sensibilisation aux risques ransomware
+
+
+
+
+
 <br>
-
-
-
-
 
 
 <p><b>🔴 PROJET 2 — Interconnection de 3 réseaux avec CiscoPacketTracer (LAB éducatif)</b></p>
@@ -116,12 +110,12 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 📡 Alarmes, capteur de mouvement et caméra  sont utilisés dans ce projet. 
 
 
-<p><b>💡 3. Environnement technique </b></p>
+<p><b>💡 2. Environnement technique </b></p>
  
 - Cisco Packet Tracer
 
 
-<p><b>🔴 4. Actions réalisées </b></p>
+<p><b>🔴 3. Actions réalisées </b></p>
 
 - Configuration des réseaux
    
@@ -138,7 +132,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 - Configuration des règles 
 
 
-<p><b>🔴 5. Résultats observés </b></p>
+<p><b>🔴 4. Résultats observés </b></p>
 
 - Cette demonstration illustre comment l'internet des objets peut transformer la surveillance medicale en connectant intelligiblement les capteurs et serveurs dasn un systeme d'information moderne.
 
@@ -163,6 +157,12 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 
 
+
+
+
+
+<br>
+
 <p><b>🔴 PROJET 3 — Comment pirater un compte: Tik-Tok, Amazon, Instagram... (LAB éducatif)</b></p>
 
 <p><b>1. Contexte </b></p>
@@ -170,7 +170,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 - Dans cette vidéo, je simule une campagne de phishing avec l'outil GoPhish afin d’expliquer comment fonctionnent des attaques faites avec des faux emails.
 L’objectif est uniquement éducatif : comprendre les méthodes de phising  utilisées par les cybercriminels pour la prevention.
 
-<p><b>💡 3. Environnement technique </b></p>
+<p><b>💡 2. Environnement technique </b></p>
  
 - Attaquant : Kali Linux
 
@@ -180,7 +180,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 - Outils : Terminal Linux, Gophish, 
 
-<p><b>🔴 4. Actions réalisées </b></p>
+<p><b>🔴 3. Actions réalisées </b></p>
 
 - Présentation de GoPhish
    
@@ -194,7 +194,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 <p><b>- Contre-mésures: Mesures de sécurité essentielles </b></p>
 
 
-<p><b>🔴 5. Résultats observés </b></p>
+<p><b>🔴 4. Résultats observés </b></p>
 
 - L'outil Gophish génère des faux mails mais qui ressemblent vraiment aux vrais.
 - Le pirate arrive a prendre le controle d'un compte une fois qu'il a en sa possession les identifiants. Et la compromission devient encore plus facile, si le    compte de l'utilisateur cible n'a pas de protection et encore plus si l'utilisateur est quelqu'un de moins informe en cybersecurite. 
@@ -218,12 +218,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 
 
-
-
-
-
-
-<p><b>🔴 6. Analyse & Défense </b></p>
+<p><b>🔴 5. Analyse & Défense </b></p>
 
 - Il faut se méfier de l'urgence et du secret ces mails ont tous pour caracteristiques,te pousser a agir vite et te demande d'agir dans l'anonymat.
 
@@ -250,7 +245,7 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 
 
-<p><b>👨‍💻 7. Projets Cybersécurité </b></p>
+<p><b>👨‍💻 6. Projets Cybersécurité </b></p>
 
 <p><b>🎥 -Vidéos YouTube:</b></p>
 
@@ -284,7 +279,10 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 📌 Chaîne YouTube : ([Cliquez-ici](https://youtube.com/@sahloguen?si=Hpktf-nre0k2oLam))
 
+
+
+
 <br>
 
-🌐 Me contacter
+<p><b>🌐 7 Me contacter </b></p>
 <p> <a href="https://www.linkedin.com/"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a> &nbsp; <a href="https://www.youtube.com/"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg"/></a> &nbsp; <a href="https://t.me/"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg"/></a> </p>
