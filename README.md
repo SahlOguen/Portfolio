@@ -141,15 +141,15 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
   
 <p><b>📸 Captures D'écran</b></p>
 
-[Image: Mise en place de l’environnement de laboratoire](IOT-1.png.png)
+[Image: Configuration des réseaux](IOT-2.png.png)
 
-[Image: Récuperation du mot de passe et de l'authentification par l'attaquant](IOT-2.png)
+[Image: Adressage des IP](IOT-4.png.png)
 
-[Image: Chiffrement des fichiers](03_CAP.png)
+[Image: Adressage des routeurs ](IOT-5.png.png)
 
-[Image: Note de rançon](04_CAP.png)
+[Image: Configuration des tables de routage](IOT-6.png.png)
 
-[Image: Configuration du fichier sshd_config](05_CAP.png)
+[Image: Configuration des règles](IOT-7.png.png)
 
 
 <p><b>🎥 Projet en vidéo</b></p>
