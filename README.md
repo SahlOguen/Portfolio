@@ -104,7 +104,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 
 
-<p><b>PROJET 2 — Interconnection de 3 réseaux avec CiscoPacketTracer (LAB éducatif)</b></p>
+<p><b>🔴 PROJET 2 — Interconnection de 3 réseaux avec CiscoPacketTracer (LAB éducatif)</b></p>
 
 <p><b>1. Contexte </b></p>
 
