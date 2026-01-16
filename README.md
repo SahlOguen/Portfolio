@@ -257,14 +257,41 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 <p><b>📌 Liens </b></p>
 
-
-👉 [Comment pirater un compte: Tik-Tok, Amazon, Instagram...](https://youtu.be/qGTKKoFPMW0?si=zNIWPpfqJKvT-Oha)
-
 👉 [Devenir invisible sur un réseau | Les trois étapes les plus incontournables](https://youtu.be/r2xa73cp0M8?si=Wsb3zx9YJcA8MnSx)
 
 👉 [Comment faire un backdooring avancé](https://youtu.be/eOoJ-geUvvg?si=lMBN3-H3jgrP8eyO)
 
-👉 [Découvrir un  mot de passe en 5 minutes  | Avec Narthex](https://youtu.be/nUoIasbaZTs?si=KG5CnyUS13c-g2Rt))
+👉 [Découvrir un  mot de passe en 5 minutes  | Avec Narthex](https://youtu.be/nUoIasbaZTs?si=KG5CnyUS13c-g2Rt)
+
+👉 [Attention - La menace de l'IA s'accentue sur nous](https://youtu.be/DF_HJGa7uy4?si=xLHvRF1RxAG6CDKV)
+
+👉 [Pirater  un Wi-Fi sécurisé avec le WPA 2 - WPA 3](https://youtu.be/fbQuDP7hVsA?si=75BI0LQ_hKwegnJd)
+
+👉 [Nos métiers sont-elles vraiment menacés face à l'IA ?](https://youtu.be/suzDN2aGeP4?si=KfK0Q9ofMkFX4oZZ)
+
+👉 [Les bases de la Navigation sécurisée pour les débutants (Partie 1)](https://youtu.be/2uEcNuc6xmk?si=_N7QkML2IiA6t33X)
+
+👉 [Les bases de la Navigation sécurisée pour les débutants (Partie 2)](https://youtu.be/zYQkh7JklWQ?si=3jJKxSW5XzDEQrpD)
+
+👉 [Juste ces 2 commandes vous montrent le trafic Réseau)](https://youtu.be/NuBnztCzF5M?si=hY0JD-dzYTD0uTKW)
+
+👉 [Le meilleur VPN gratuit en 2025 : Le plus sûr et le plus rapide  pour votre vie privée en ligne](https://youtu.be/be3CbHOqo7c?si=RlbK6DoDZNFM_MOD)
+
+👉 [Mettre à jour kali linux de A à Z](https://youtu.be/lKcUrAygCzE?si=ULPWoIP7gMqxlE1T)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br>
