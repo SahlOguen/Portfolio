@@ -184,11 +184,11 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
    
 - Lancement de Gophish
   
-- Ouverture du email de phising Amazon
+- Ouverture du e-mail de phising Amazon
 
 - Capture des identifiants compte Amazon
   
-- Ouverture du email de phising Amazon TIK TOK
+- Ouverture du e-mail de phising Amazon TIK TOK
 
 - Capture des identifiants compte TIK TOK
    
@@ -203,15 +203,15 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 <p><b>📸 Captures D'écran</b></p>
 
-[Image: Mise en place de l’environnement de laboratoire](01_CAP.png)
+[Image: Lancement de Gophish](GOF1.png)
 
-[Image: Récuperation du mot de passe et de l'authentification par l'attaquant](02_CAP.png)
+[Image: Ouverture du e-mail de phising Amazon](GOF2.png)
 
-[Image: Chiffrement des fichiers](03_CAP.png)
+[Image: Capture des identifiants compte Amazon](GOF3.png)
 
-[Image: Note de rançon](04_CAP.png)
+[Image: Ouverture du e-mail de phising Amazon TIK TOK](GOF4.png)
 
-[Image: Configuration du fichier sshd_config](05_CAP.png)
+[Image: Capture des identifiants compte TIK TOK](GOF5.png)
 
 
 <p><b>🎥 Projet en vidéo</b></p>
@@ -280,16 +280,6 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 👉 [Le meilleur VPN gratuit en 2025 : Le plus sûr et le plus rapide  pour votre vie privée en ligne](https://youtu.be/be3CbHOqo7c?si=RlbK6DoDZNFM_MOD)
 
 👉 [Mettre à jour kali linux de A à Z](https://youtu.be/lKcUrAygCzE?si=ULPWoIP7gMqxlE1T)
-
-
-
-
-
-
-
-
-
-
 
 
 
