@@ -163,9 +163,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 
 
-<p><b>🔴  3 Projets Pratiques Sélectionnés </b></p>
-
-<p><b>PROJET 1 — Comment pirater un compte: Tik-Tok, Amazon, Instagram... (LAB éducatif)</b></p>
+<p><b>🔴 PROJET 3 — Comment pirater un compte: Tik-Tok, Amazon, Instagram... (LAB éducatif)</b></p>
 
 <p><b>1. Contexte </b></p>
 
@@ -184,19 +182,22 @@ L’objectif est uniquement éducatif : comprendre les méthodes de phising  uti
 
 <p><b>🔴 4. Actions réalisées </b></p>
 
-- Présentation de GoPhish  
+- Présentation de GoPhish
+   
 - Lancement de Gophish
+  
 - Lancement de la campagne de piratage Amazon
+  
 - Lancement de la campagne de piratage TIK TOK
-- Mesures de sécurité essentielles 
+   
 
-<p><b>- Contre-mésures </b></p>
+<p><b>- Contre-mésures: Mesures de sécurité essentielles </b></p>
 
 
 <p><b>🔴 5. Résultats observés </b></p>
 
-Les fichiers de la machine cible ont été chiffrés et rendus inaccessibles.
-Cette situation démontre l’impact critique d’un ransomware sur la disponibilité des données.
+- L'outil Gophish génère des faux mails mais qui ressemblent vraiment aux vrais.
+- Le pirate arrive a prendre le controle d'un compte une fois qu'il a en sa possession les identifiants. Et la compromission devient encore plus facile, si le    compte de l'utilisateur cible n'a pas de protection et encore plus si l'utilisateur est quelqu'un de moins informe en cybersecurite. 
 
 <p><b>📸 Captures D'écran</b></p>
 
@@ -213,7 +214,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 <p><b>🎥 Projet en vidéo</b></p>
 
-👉 [Suivre la vidéo ici](https://youtu.be/hoLiapFHhdM?si=mGYM2-irQt6Vebjv)
+👉 [Suivre la vidéo ici](https://youtu.be/qGTKKoFPMW0?si=zNIWPpfqJKvT-Oha)
 
 
 
@@ -224,18 +225,28 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 
 <p><b>🔴 6. Analyse & Défense </b></p>
 
-- Surveillance des comportements anormaux
+- Il faut se méfier de l'urgence et du secret ces mails ont tous pour caracteristiques,te pousser a agir vite et te demande d'agir dans l'anonymat.
 
-- Sauvegardes régulières des données
+- Ces types d'attaques créent un sentiment de panique pour t'empécher de réfléchir
 
-- Limitation des privilèges utilisateurs
+- Active le M2FA (l'authentification a double facteur)
 
-- Sensibilisation aux risques ransomware
+- Notifier et former les employés vulnérables
+
+- Mettre à jour les filtres anti-spam/phishing
+
+- Monitoring 24/7 : Centre de sécurité opérationnelle (SOC)
+
+- Exiger des mots de passe complexes avcec au minimum 12 a 14 caracteres
+  
+- Filtrage web : Bloquer les sites de phishing connus
+
+- Anti-spam avancé : Configurer des règles strictes
+
+- EDR (Endpoint Detection & Response) : Détecter les comportements suspects
+
+
 <br>
-
-
-
-
 
 
 
@@ -246,7 +257,7 @@ Cette situation démontre l’impact critique d’un ransomware sur la disponibi
 <p><b>📌 Liens </b></p>
 
 
-👉 [Comment pirater un compte: Tik-Tok, Amazon, Instagram...](https://youtu.be/qGTKKoFPMW0?si=zNIWPpfqJKvT-Oha))
+👉 [Comment pirater un compte: Tik-Tok, Amazon, Instagram...](https://youtu.be/qGTKKoFPMW0?si=zNIWPpfqJKvT-Oha)
 
 👉 [Devenir invisible sur un réseau | Les trois étapes les plus incontournables](https://youtu.be/r2xa73cp0M8?si=Wsb3zx9YJcA8MnSx)
 
