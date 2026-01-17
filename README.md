@@ -100,10 +100,30 @@ Les fichiers de la machine cible ont été rendus **inaccessibles**, démontrant
 ### 🛡️ Analyse & Défense
 - Surveillance des comportements anormaux
 - Sauvegardes régulières
-- Limitation des privilèges
-- Sensibilisation des utilisateurs
+  Il faut avoir l'habitude de faire des sauvegardes de fichiers sur des differents dispositifs (Clés USB, Cartes memoires, Disques durs...) 
+- Limitation des privilèges  
+Dans le fichier sshd_config je modifie quelques lignes pour sécuriser le serveur.
 
----
+💡 Je commente ou je mets sur “no” la ligne PermitRootLogin yes ? Pour empécher l'autorisation de la connexion directe au compte root via SSH.
+
+💡 Pour bloquer l’authentification par mot de passe, je commente la ligne “ PasswordAuthentication yes” . Cette ligne Oblige l’utilisation de clés SSH.
+
+💡 Je modifie la ligne MaxAuthTries 6 pour limiter les attaques par force brute je met la valeur à 3.
+
+💡 La ligne “ X11Forwarding no” Désactive le transfert graphique X11 via SSH et empêche l'exploitation graphique.
+
+💡 Je modifie la ligne “ClientAliveInterval 300 ” cela envoie un signal toutes les 300 secondes (5 min) au client pour couper les sessions inactives
+   et limiter les session hijacking
+   
+💡 Et à la fin j'ajoute la ligne “AllowUsers admin” cela signifie que Seul l'utilisateur admin peut se connecter en SSH'.
+   C'est une liste blanche si votre nom n'est pas dans la liste, pas d'accès
+
+  
+
+  
+
+ 
+  
 
 ## 🔴 PROJET 2 — Interconnexion de 3 Réseaux (Cisco Packet Tracer)
 
@@ -209,18 +229,16 @@ Simulation d’une campagne de phishing avec **GoPhish** pour comprendre les tec
 
 ---
 
-## 🌐 Me contacter
+<h3>🌐 Me contacter</h3>
 
 <p>
-  <a href="mailto:oguensahl@gmail.com"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg"/></a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/sahloguen/"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a>
-  &nbsp;
-  <a href="https://www.youtube.com/@sahloguen"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg"/></a>
-  &nbsp;
-  <a href="https://www.instagram.com/sahloguen/"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg"/></a>
-  &nbsp;
-  <a href="https://www.tiktok.com/@sahloguen"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/tiktok.svg"/></a>
-  &nbsp;
-  <a href="https://t.me/SahlOguen"><img width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg"/></a>
+<a href="mailto:oguensahl@gmail.com">📧 Email</a><br>
+<a href="https://www.linkedin.com/in/tonprofil">💼 LinkedIn</a><br>
+<a href="https://github.com/tonprofil">🐙 GitHub</a><br>
+<a href="https://www.youtube.com/@tonchaine">🎥 YouTube</a><br>
+<a href="https://t.me/sahloguen">💬 Telegram</a><br>
+<a href="https://tiktok.com/@sahloguen15?_r=1&_t=ZM-91zubtLnE7c">🎵 TikTok</a><br>
+<a href="https://www.instagram.com/tonpseudo">📸 Instagram</a><br>
+📞 Téléphone : +XXX XX XX XX
 </p>
+
