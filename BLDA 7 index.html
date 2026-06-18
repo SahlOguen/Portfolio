@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B &amp; LUNTALA, LDA – Prestations de services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary: #0b2a4a;
+            --primary-light: #1a3f66;
+            --accent: #b8914b;
+            --accent-hover: #a07d3e;
+            --light: #f8f6f2;
+            --white: #ffffff;
+            --dark: #1a202c;
+            --gray: #e2e8f0;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.14);
+            --radius: 8px;
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font: 'Segoe UI', Roboto, system-ui, sans-serif;
+            --font-heading: 'Playfair Display', 'Times New Roman', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font);
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+        }
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        a:hover {
+            color: var(--accent-hover);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 36px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(184, 145, 75, 0.35);
+        }
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(184, 145, 75, 0.45);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 56px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 18px;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+        .section-title p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-top: 12px;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1100;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            min-height: 72px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .logo img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .logo-text .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+        .logo-text .tagline {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-links li a {
+            color: var(--secondary);
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .nav-links li a:hover {
+            color: var(--accent);
+            background: rgba(184, 145, 75, 0.08);
+        }
+        .nav-links li a.btn-nav {
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(184, 145, 75, 0.30);
+        }
+        .nav-links li a.btn-nav:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+            background: none;
+            border: none;
+            padding: 4px 8px;
+        }
+
+        /* ===== HERO (CENTRÉ) ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 0 100px;
+            color: var(--white);
+            overflow: hidden;
+            background: var(--primary);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.55;
+            filter: brightness(0.35) contrast(0.85);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 42, 74, 0.80) 0%, rgba(13, 47, 79, 0.90) 100%);
+            opacity: 0.75;
+            z-index: 1;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 4rem;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 .highlight {
+            color: var(--accent);
+            font-style: italic;
+            font-weight: 800;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        /* ===== SERVICES (images agrandies) ===== */
+        #services {
+            background: var(--white);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(184, 145, 75, 0.30);
+        }
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            background: #e2e8f0;
+            min-height: 240px;
+        }
+        .service-image img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .service-card:hover .service-image img {
+            transform: scale(1.03);
+        }
+
+        /* PATCH BRANDING */
+        .brand-patch {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(11, 42, 74, 0.92);
+            color: #ffffff;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 2px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+            font-family: 'Arial Black', sans-serif;
+            line-height: 1.3;
+            text-align: center;
+        }
+        .brand-patch small {
+            display: block;
+            font-size: 0.5rem;
+            font-weight: 400;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        .brand-patch.helmet {
+            background: rgba(0, 0, 0, 0.75);
+            border-color: #ffcc00;
+            border-radius: 20px;
+            padding: 2px 14px;
+            font-size: 0.85rem;
+            bottom: 12px;
+            right: 12px;
+        }
+        .brand-patch.helmet small {
+            font-size: 0.5rem;
+        }
+
+        .service-body {
+            padding: 24px 20px 28px;
+            flex: 1;
+        }
+        .service-body h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .service-body p {
+            font-size: 0.95rem;
+            color: #4a5568;
+            margin-bottom: 0;
+        }
+        .service-body .click-hint {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ===== QHSE & CONTEÚDO LOCAL ===== */
+        #qhse, #conteudo-local {
+            background: var(--light);
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .two-col .col-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        .two-col .col-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .two-col .col-text h3 {
+            font-size: 1.8rem;
+        }
+        .two-col .col-text ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .two-col .col-text ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .two-col .col-text ul li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ABOUT (Sobre Nós) */
+        .about {
+            background: var(--light);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        .about-image img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+        .about-text h2 {
+            font-size: 2.2rem;
+        }
+        .about-text .lead {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 24px;
+            margin: 24px 0 32px;
+            list-style: none;
+        }
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .about-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* CONTACT */
+        #contact {
+            background: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .contact-item:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateX(4px);
+        }
+        .contact-item .icon {
+            font-size: 1.5rem;
+            width: 48px;
+            height: 48px;
+            background: rgba(184, 145, 75, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .contact-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+        .contact-item p {
+            margin-bottom: 0;
+            color: #4a5568;
+        }
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .contact-form h3 {
+            font-size: 1.4rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--gray);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        .form-control:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(184, 145, 75, 0.15);
+        }
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        /* MODAL */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: var(--white);
+            max-width: 750px;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.4s ease;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-box .modal-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: #0b2a4a;
+            position: relative;
+        }
+        .modal-box .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .modal-box .modal-image .brand-patch {
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.9rem;
+            padding: 8px 18px;
+        }
+        .modal-box .modal-body {
+            padding: 30px 35px;
+            overflow-y: auto;
+        }
+        .modal-box .modal-body h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        .modal-box .modal-body .meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .modal-box .modal-body .meta span {
+            background: var(--light);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .modal-box .modal-body p {
+            color: #2d3748;
+            line-height: 1.8;
+        }
+        .modal-box .modal-body .features-list {
+            list-style: none;
+            margin: 16px 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 16px;
+        }
+        .modal-box .modal-body .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .modal-box .modal-body .features-list li::before {
+            content: '▹';
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .modal-close:hover {
+            background: var(--accent);
+            transform: rotate(90deg);
+        }
+        .modal-box .modal-footer {
+            padding: 16px 35px 30px;
+            border-top: 1px solid var(--gray);
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 60px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 280px;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 4px;
+        }
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 0;
+        }
+        .footer-bottom .legal a {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.85rem;
+            margin-left: 20px;
+        }
+        .footer-bottom .legal a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .about-grid, .two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 24px;
+                box-shadow: var(--shadow-hover);
+                border-top: 1px solid rgba(0, 0, 0, 0.04);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li a {
+                padding: 12px 16px;
+                width: 100%;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .hero {
+                min-height: auto;
+                padding: 120px 0 70px;
+            }
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .about-image img, .two-col .col-image img {
+                height: 240px;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom .legal a {
+                margin: 0 10px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-image img {
+                height: 240px;
+            }
+            .modal-box .modal-body .features-list {
+                grid-template-columns: 1fr;
+            }
+            .modal-box .modal-image {
+                height: 200px;
+            }
+            .modal-box .modal-body {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-btns .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .contact-form {
+                padding: 24px 16px;
+            }
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#accueil" class="logo">
+                    <img src="LOGO LTLA BIAN.jpg" alt="Logo B & LUNTALA, LDA" onerror="this.style.display='none'">
+                    <span class="logo-text">
+                        <span class="name">B &amp; LUNTALA, LDA</span>
+                        <span class="tagline">Prestations de services</span>
+                    </span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#accueil">Início</a></li>
+                    <li><a href="#apropos">Sobre Nós</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#qhse">QHSE</a></li>
+                    <li><a href="#conteudo-local">Conteúdo Local</a></li>
+                    <li><a href="#contact" class="btn-nav">Contactos</a></li>
+                </ul>
+                <button class="mobile-menu" id="mobileMenu" aria-label="Menu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Des prestations de services<br/>
+                    <span class="highlight">à la hauteur de vos exigences</span>
+                </h1>
+                <p>
+                    B &amp; LUNTALA, LDA vous accompagne dans tous vos projets : nettoyage, sécurité, métallurgie,
+                    maintenance, recrutement, fourniture d'équipements, construction et isolation thermique.
+                </p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Nos services</a>
+                    <a href="#contact" class="btn btn-outline">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE NÓS ===== -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nós</h2>
+                <p>Uma empresa angolana ao serviço do seu desenvolvimento</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipa" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Excelência e proximidade</h2>
+                    <p class="lead">Fundada em 2024, a B &amp; LUNTALA, LDA reúne especialistas de múltiplas áreas.</p>
+                    <p>Colocamos um ponto de honra em compreender as suas necessidades e responder com soluções adaptadas, no respeito dos prazos e das normas.</p>
+                    <ul class="about-features">
+                        <li>Equipa experiente</li>
+                        <li>Reatividade</li>
+                        <li>Material moderno</li>
+                        <li>Compromisso com a qualidade</li>
+                    </ul>
+                    <a href="#contact" class="btn">Fale connosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Serviços</h2>
+                <p>Clique num cartão para descobrir todos os detalhes</p>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+
+                <!-- 1. Nettoyage -->
+                <div class="service-card" data-service="nettoyage">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Limpeza" loading="lazy">
+                        <div class="brand-patch">B &amp; LUNTALA <small>• Equipa Limpa</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Limpeza e manutenção</h3>
+                        <p>Limpeza de instalações, limpeza industrial, desinfeção.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 2. Sécurité -->
+                <div class="service-card" data-service="securite">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Segurança" loading="lazy">
+                        <div class="brand-patch helmet">B&L <small>SEGURANÇA</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Segurança e vigilância</h3>
+                        <p>Vigilância humana e eletrónica, controlo de acessos.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 3. Métaux -->
+                <div class="service-card" data-service="metaux">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Metais" loading="lazy">
+                        <div class="brand-patch">B &amp; LUNTALA <small>METALURGIA</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Fabrico e instalação de metais</h3>
+                        <p>Conceção, soldadura, montagem de estruturas metálicas.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 4. Maintenance -->
+                <div class="service-card" data-service="maintenance">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Manutenção" loading="lazy">
+                        <div class="brand-patch helmet">B&L <small>MANUTENÇÃO</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Manutenção industrial</h3>
+                        <p>Manutenção preventiva e corretiva de equipamentos.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 5. Recrutement -->
+                <div class="service-card" data-service="recrutement">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Recrutamento" loading="lazy">
+                        <div class="brand-patch">B &amp; LUNTALA <small>RH</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Recrutamento e mobilidade</h3>
+                        <p>Seleção, testes, entrevistas, gestão de carreiras.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 6. Fourniture -->
+                <div class="service-card" data-service="fourniture">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fornecimento" loading="lazy">
+                        <div class="brand-patch">B &amp; LUNTALA <small>LOGÍSTICA</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Fornecimento de bens e equipamentos</h3>
+                        <p>Compra, entrega e instalação de material e consumíveis.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 7. Construction -->
+                <div class="service-card" data-service="construction">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construção" loading="lazy">
+                        <div class="brand-patch helmet">B&L <small>BTP</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Construção civil</h3>
+                        <p>Edificação, engenharia civil, renovação, arruamentos.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+                <!-- 8. Isolation -->
+                <div class="service-card" data-service="isolation">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581092335871-3b7b8c1cbad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Isolamento" loading="lazy">
+                        <div class="brand-patch">B &amp; LUNTALA <small>TERMOTÉCNICA</small></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Isolamento térmico industrial</h3>
+                        <p>Isolamento de tubagens, tanques, coberturas.</p>
+                        <div class="click-hint">👆 Clique para saber mais</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QHSE ===== -->
+    <section id="qhse">
+        <div class="container">
+            <div class="section-title">
+                <h2>QHSE</h2>
+                <p>Qualidade, Higiene, Segurança e Ambiente</p>
+            </div>
+            <div class="two-col">
+                <div class="col-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QHSE" loading="lazy">
+                </div>
+                <div class="col-text">
+                    <h3>Compromisso com a excelência</h3>
+                    <p>A B &amp; LUNTALA, LDA aplica as mais rigorosas normas de Qualidade, Higiene, Segurança e Ambiente em todas as suas atividades.</p>
+                    <ul>
+                        <li>Certificação ISO 9001 (em curso)</li>
+                        <li>Política de segurança no trabalho</li>
+                        <li>Gestão de resíduos e impacto ambiental</li>
+                        <li>Formação contínua das equipas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTEÚDO LOCAL ===== -->
+    <section id="conteudo-local" style="background:var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conteúdo Local</h2>
+                <p>Valorização dos recursos e talentos angolanos</p>
+            </div>
+            <div class="two-col">
+                <div class="col-text">
+                    <h3>Compromisso com Angola</h3>
+                    <p>A B &amp; LUNTALA, LDA privilegia a contratação de mão‑de‑obra local, a parceria com fornecedores nacionais e a transferência de know‑how para as comunidades.</p>
+                    <ul>
+                        <li>Mais de 85% de colaboradores angolanos</li>
+                        <li>Fornecedores locais qualificados</li>
+                        <li>Programas de formação profissional</li>
+                        <li>Apoio a projetos sociais</li>
+                    </ul>
+                </div>
+                <div class="col-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Conteúdo Local" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTOS ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactos</h2>
+                <p>Estamos ao seu dispor para qualquer questão</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Luanda</h4>
+                            <p>Rua Direita da Samba, próximo do banco Atlantico</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Cabinda</h4>
+                            <p>Deolinda Rodrigues</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+244957157011">+244 957 157 011</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:bianchildaluntala@gmail.com">bianchildaluntala@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">🕒</div>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Seg – Sex : 8h00 – 17h30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envie‑nos uma mensagem</h3>
+                    <p class="form-sub">Respondemos em menos de 24 horas.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome completo *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" class="form-control" placeholder="Nome da sua empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceSelect">Serviço que lhe interessa</label>
+                            <select id="serviceSelect" class="form-control">
+                                <option value="">Selecione um serviço</option>
+                                <option value="nettoyage">Limpeza e manutenção</option>
+                                <option value="securite">Segurança e vigilância</option>
+                                <option value="metaux">Fabrico de metais</option>
+                                <option value="maintenance">Manutenção industrial</option>
+                                <option value="recrutement">Recrutamento e mobilidade</option>
+                                <option value="fourniture">Fornecimento de bens</option>
+                                <option value="construction">Construção civil</option>
+                                <option value="isolation">Isolamento térmico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" class="form-control" placeholder="Descreva a sua necessidade..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width:100%;">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-box">
+            <div class="modal-image" id="modalImage">
+                <img src="" alt="Détail service" id="modalImg">
+                <button class="modal-close" id="modalCloseBtn">✕</button>
+                <div class="brand-patch" id="modalPatch">B &amp; LUNTALA</div>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <h2 id="modalTitle">Titre</h2>
+                <div class="meta">
+                    <span id="modalCategory">Service</span>
+                    <span>⏱️ Intervention rapide</span>
+                </div>
+                <p id="modalDesc">Description détaillée du service.</p>
+                <ul class="features-list" id="modalFeatures">
+                    <li>Expertise reconnue</li>
+                    <li>Matériel de pointe</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn" style="flex:1; text-align:center;">Demander un devis pour ce service</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#accueil" class="logo" style="color:var(--white);">
+                        <img src="LOGO LTLA BIAN.jpg" alt="B & LUNTALA, LDA" onerror="this.style.display='none'" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text">
+                            <span class="name" style="color:var(--white);">B &amp; LUNTALA, LDA</span>
+                            <span class="tagline" style="color:var(--accent);">Prestations de services</span>
+                        </span>
+                    </a>
+                    <p>O seu parceiro de confiança para prestações de qualidade em Angola.</p>
+                    <div class="social-links">
+                        <a href="#">in</a>
+                        <a href="#">f</a>
+                        <a href="#">t</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Início</a></li>
+                        <li><a href="#apropos">Sobre Nós</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#qhse">QHSE</a></li>
+                        <li><a href="#conteudo-local">Conteúdo Local</a></li>
+                        <li><a href="#contact">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Limpeza</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Metais</a></li>
+                        <li><a href="#">Manutenção</a></li>
+                        <li><a href="#">Recrutamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Receba as nossas novidades.</p>
+                    <form id="newsletterForm">
+                        <div class="form-group" style="display:flex; gap:10px; flex-wrap:wrap;">
+                            <input type="email" class="form-control" placeholder="Seu email" required style="flex:1; min-width:150px;">
+                            <button type="submit" class="btn" style="padding:10px 20px; font-size:0.9rem;">Subscrever</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 B &amp; LUNTALA, LDA. Todos os direitos reservados.</p>
+                <div class="legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        (function() {
+            // --- Menu mobile ---
+            const mobileBtn = document.getElementById('mobileMenu');
+            const navLinks = document.getElementById('navLinks');
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                });
+                navLinks.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navLinks.classList.remove('active');
+                    });
+                });
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.navbar')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            }
+
+            // --- Header scroll ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // --- BASE DE DONNÉES DES SERVICES ---
+            const servicesData = {
+                nettoyage: {
+                    title: 'Limpeza e manutenção',
+                    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B & LUNTALA • Equipa Limpa',
+                    category: 'Limpeza / Manutenção',
+                    desc: 'Oferecemos serviços de limpeza adaptados a todos os ambientes: escritórios, espaços industriais, comércios e estaleiros. As nossas equipas utilizam produtos ecológicos e técnicas de desinfeção avançadas para garantir um local de trabalho saudável.',
+                    features: ['Limpeza corrente e profunda', 'Desinfeção de superfícies', 'Gestão de resíduos', 'Intervenções pontuais ou regulares']
+                },
+                securite: {
+                    title: 'Segurança e vigilância',
+                    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B&L • SEGURANÇA',
+                    category: 'Segurança / Vigilância',
+                    desc: 'Proteja os seus bens e colaboradores com os nossos serviços de segurança personalizados. Mobilizamos agentes formados, rondas de vigilância e sistemas de videoproteção para uma tranquilidade total, 24 horas por dia.',
+                    features: ['Agentes certificados', 'Controlo de acessos', 'Rondas noturnas', 'Reação rápida em caso de incidente']
+                },
+                metaux: {
+                    title: 'Fabrico e instalação de metais industriais',
+                    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B & LUNTALA • METALURGIA',
+                    category: 'Metalurgia / Estruturas',
+                    desc: 'Da conceção à montagem, realizamos todas as suas estruturas metálicas: pórticos, escadas, portões, guarda‑corpos e estruturas à medida. A nossa oficina dispõe de equipamentos de soldadura e corte de precisão.',
+                    features: ['Soldadura MIG/TIG', 'Corte a laser', 'Montagem no local', 'Respeito pelas normas de segurança']
+                },
+                maintenance: {
+                    title: 'Manutenção industrial',
+                    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B&L • MANUTENÇÃO',
+                    category: 'Manutenção / Mecânica',
+                    desc: 'Asseguramos a manutenção preventiva e corretiva dos seus equipamentos industriais. A nossa equipa intervém rapidamente para diagnosticar avarias, substituir peças e otimizar a vida útil das suas máquinas.',
+                    features: ['Manutenção mecânica', 'Eletrotécnica', 'Peças sobressalentes', 'Contrato de manutenção personalizado']
+                },
+                recrutement: {
+                    title: 'Recrutamento e mobilidade de pessoal',
+                    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B & LUNTALA • RH',
+                    category: 'Recursos Humanos',
+                    desc: 'Encontre os melhores talentos graças à nossa experiência em recrutamento. Realizamos a prospeção, testes psicotécnicos, entrevistas e integração dos novos colaboradores. Acompanhamos também a gestão de mobilidade interna.',
+                    features: ['Prospeção multicanal', 'Avaliação de competências', 'Gestão de carreiras', 'Integração personalizada']
+                },
+                fourniture: {
+                    title: 'Fornecimento de bens e equipamentos',
+                    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B & LUNTALA • LOGÍSTICA',
+                    category: 'Logística / Aprovisionamento',
+                    desc: 'Fornecemos todo o material, ferramentas, mobiliário e consumíveis necessários à sua atividade. A nossa equipa logística assegura a receção, armazenamento e entrega no seu local dentro dos prazos definidos.',
+                    features: ['Compra agrupada', 'Stock tampão', 'Entrega rápida', 'Instalação incluída']
+                },
+                construction: {
+                    title: 'Construção civil',
+                    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B&L • BTP',
+                    category: 'Construção / Engenharia',
+                    desc: 'Realizamos todos os tipos de trabalhos de construção: edifícios industriais, espaços comerciais, renovações e arruamentos. Cumprimos rigorosamente as normas de construção e os prazos contratuais.',
+                    features: ['Obra e acabamentos', 'Eletricidade e canalização', 'Projeto chave na mão', 'Respeito pelos prazos']
+                },
+                isolation: {
+                    title: 'Isolamento térmico industrial',
+                    image: 'https://images.unsplash.com/photo-1581092335871-3b7b8c1cbad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    patch: 'B & LUNTALA • TERMOTÉCNICA',
+                    category: 'Isolamento / Energia',
+                    desc: 'Melhore a eficiência energética das suas instalações com as nossas soluções de isolamento térmico. Intervenimos em tubagens, tanques, coberturas e equipamentos industriais com materiais de alto desempenho.',
+                    features: ['Lã de rocha', 'Poliuretano', 'Economia de energia', 'Redução de ruídos']
+                }
+            };
+
+            // --- MODAL ---
+            const modal = document.getElementById('serviceModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalPatch = document.getElementById('modalPatch');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalCategory = document.getElementById('modalCategory');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalFeatures = document.getElementById('modalFeatures');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+            function openModal(serviceKey) {
+                const data = servicesData[serviceKey];
+                if (!data) return;
+
+                modalImg.src = data.image;
+                modalPatch.textContent = data.patch;
+                modalTitle.textContent = data.title;
+                modalCategory.textContent = data.category;
+                modalDesc.textContent = data.desc;
+
+                modalFeatures.innerHTML = '';
+                data.features.forEach(function(f) {
+                    const li = document.createElement('li');
+                    li.textContent = f;
+                    modalFeatures.appendChild(li);
+                });
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            document.querySelectorAll('.service-card').forEach(function(card) {
+                card.addEventListener('click', function(e) {
+                    const service = this.getAttribute('data-service');
+                    if (service && servicesData[service]) {
+                        openModal(service);
+                    }
+                });
+            });
+
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeModal);
+            }
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+
+            // --- FORMULÁRIOS ---
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name')?.value.trim();
+                    const email = document.getElementById('email')?.value.trim();
+                    const message = document.getElementById('message')?.value.trim();
+                    if (name && email && message) {
+                        alert('Obrigado pela sua mensagem, ' + name + '! Responderemos em breve.');
+                        this.reset();
+                    } else {
+                        alert('Por favor, preencha todos os campos obrigatórios.');
+                    }
+                });
+            }
+
+            const nlForm = document.getElementById('newsletterForm');
+            if (nlForm) {
+                nlForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const input = this.querySelector('input[type="email"]');
+                    if (input && input.value.trim()) {
+                        alert('Obrigado pela sua subscrição!');
+                        input.value = '';
+                    } else {
+                        alert('Por favor, insira um endereço de email válido.');
+                    }
+                });
+            }
+
+            // Âncoras suaves
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const offset = header ? header.offsetHeight : 72;
+                        const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: pos, behavior: 'smooth' });
+                    }
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
